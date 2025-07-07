@@ -4,16 +4,6 @@
   /* Warm cream and earthy color palette */
   --background: #faf8f5;
   --foreground: #2c2420;
-  --cream: #faf8f5;
-  --warm-cream: #f5f1eb;
-  --soft-beige: #e8e2d8;
-  --warm-beige: #d4c4b0;
-  --coffee: #8b6f47;
-  --dark-coffee: #6b4e2e;
-  --charcoal: #2c2420;
-  --warm-white: #fffefb;
-  --accent-gold: #d4af37;
-  --soft-gold: #f2e6b6;
 }
 
 @theme inline {
@@ -24,17 +14,18 @@
   --font-acumin-pro-italic: var(--font-acumin-pro-italic);
   --font-acumin-pro-bold: var(--font-acumin-pro-bold);
   --font-acumin-pro-bold-italic: var(--font-acumin-pro-bold-italic);
-  --cream: #faf8f5;
-  --warm-cream: #f5f1eb;
-  --soft-beige: #e8e2d8;
-  --warm-beige: #d4c4b0;
-  --coffee: #8b6f47;
-  --dark-coffee: #6b4e2e;
-  --charcoal: #2c2420;
-  --warm-white: #fffefb;
-  --accent-gold: #d4af37;
-  --soft-gold: #f2e6b6;
+  --color-cream: #faf8f5;
+  --color-warm-cream: #f5f1eb;
+  --color-soft-beige: #e8e2d8;
+  --color-warm-beige: #d4c4b0;
+  --color-coffee: #8b6f47;
+  --color-dark-coffee: #6b4e2e;
+  --color-charcoal: #2c2420;
+  --color-warm-white: #fffefb;
+  --color-accent-gold: #d4af37;
+  --color-soft-gold: #f2e6b6;
 }
+
 
 body {
   background: var(--background);

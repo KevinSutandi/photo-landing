@@ -28,7 +28,7 @@ export default function AboutMe() {
           </div>
 
           {/* Text content */}
-          <div className="max-w-2xl animate-reveal-right">
+          <div className="md:max-w-2xl max-w-xl animate-reveal-right">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-center lg:text-left max-w-3xl mb-8 text-coffee font-acumin-pro-bold-italic">
               Hiya! I&apos;m Kevin
             </h2>

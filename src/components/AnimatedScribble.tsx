@@ -9,7 +9,7 @@ export default function AnimatedScribble() {
       {/* Main artistic scribble path */}
       <path
         d="M3 8C8 4 15 12 25 7C35 3 42 11 52 8C62 5 68 13 78 9C88 6 95 12 105 8C115 4 125 10 135 7"
-        stroke="currentColor"
+        stroke="#d4af37"
         strokeWidth="3.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -18,13 +18,13 @@ export default function AnimatedScribble() {
           strokeDasharray: '180',
           strokeDashoffset: '180',
           animation: 'drawScribble 2.5s ease-out 1s forwards',
-          filter: 'drop-shadow(0 0 2px currentColor)'
+          filter: 'drop-shadow(0 0 3px rgba(212, 175, 55, 0.4))'
         }}
       />
       {/* Second layer for more artistic depth */}
       <path
         d="M5 9C12 6 18 11 28 8C38 5 45 12 55 9C65 6 72 11 82 8C92 5 98 11 108 8C118 5 128 11 137 8"
-        stroke="currentColor"
+        stroke="#f2e6b6"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -33,7 +33,7 @@ export default function AnimatedScribble() {
           strokeDasharray: '170',
           strokeDashoffset: '170',
           animation: 'drawScribble 2.2s ease-out 1.3s forwards',
-          opacity: '0.6'
+          opacity: '0.7'
         }}
       />
     </svg>

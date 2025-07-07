@@ -26,7 +26,6 @@
   --color-soft-gold: #f2e6b6;
 }
 
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -36,6 +35,38 @@ body {
 /* Prevent scrolling when mobile menu is open */
 .menu-open {
   overflow: hidden;
+}
+
+/* Masonry Grid Styles */
+.masonry-grid {
+  display: flex;
+  margin-left: -16px; /* gutter size offset */
+  width: auto;
+}
+
+.masonry-grid-column {
+  padding-left: 16px; /* gutter size */
+  background-clip: padding-box;
+}
+
+.masonry-item {
+  margin-bottom: 16px;
+  break-inside: avoid;
+}
+
+/* Responsive masonry adjustments */
+@media (max-width: 768px) {
+  .masonry-grid {
+    margin-left: -12px;
+  }
+  
+  .masonry-grid-column {
+    padding-left: 12px;
+  }
+  
+  .masonry-item {
+    margin-bottom: 12px;
+  }
 }
 
 /* Smooth page transitions */
@@ -219,6 +250,14 @@ body {
   box-shadow: 0 20px 40px -12px rgba(139, 111, 71, 0.15), 0 8px 16px -4px rgba(139, 111, 71, 0.1);
 }
 
+.warm-shadow-xl {
+  box-shadow: 0 25px 50px -12px rgba(139, 111, 71, 0.2), 0 10px 20px -6px rgba(139, 111, 71, 0.15);
+}
+
+.warm-shadow-2xl {
+  box-shadow: 0 40px 80px -20px rgba(139, 111, 71, 0.25), 0 20px 40px -10px rgba(139, 111, 71, 0.2);
+}
+
 /* Hover effects for interactive elements */
 .warm-hover {
   transition: all 0.3s ease;
@@ -227,6 +266,21 @@ body {
 .warm-hover:hover {
   transform: translateY(-2px);
   box-shadow: 0 15px 30px -5px rgba(139, 111, 71, 0.2);
+}
+
+/* Gallery specific styles */
+.masonry-item img {
+  transition: all 0.3s ease;
+}
+
+.masonry-item:hover img {
+  transform: scale(1.02);
+}
+
+/* Lightbox styles */
+.lightbox-overlay {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* Custom scrollbar */

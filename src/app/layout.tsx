@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Topbar from "@/components/Topbar";
 
 const acuminPro = localFont({
   src: "./fonts/Acumin-RPro.otf",
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body
         className={`${acuminPro.variable} antialiased`}
       >
+        <Topbar />
         {children}
       </body>
     </html>

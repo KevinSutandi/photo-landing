@@ -47,7 +47,7 @@ export default function Topbar() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               <Link
-                href="#recent-work"
+                href="https://gallery.kevinsutandi.com"
                 className="text-white/90 hover:text-white transition-colors duration-200 text-sm uppercase tracking-wider"
               >
                 Recent Work

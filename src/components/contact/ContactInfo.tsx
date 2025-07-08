@@ -7,7 +7,7 @@ export default function ContactInfo() {
 
       <div className="space-y-4">
         <a
-          href="mailto:kevin@kevinsutandi.com"
+          href="mailto:kevinesutandi@gmail.com"
           className="flex items-center space-x-4 p-4 rounded-lg bg-cream hover:bg-soft-beige transition-all duration-300 warm-hover group"
         >
           <div className="w-12 h-12 bg-coffee/10 group-hover:bg-coffee/20 rounded-full flex items-center justify-center transition-all duration-300">
@@ -17,7 +17,7 @@ export default function ContactInfo() {
           </div>
           <div>
             <p className="font-medium text-coffee">Email</p>
-            <p className="text-dark-coffee">kevin@kevinsutandi.com</p>
+            <p className="text-dark-coffee">kevinesutandi@gmail.com</p>
           </div>
         </a>
 

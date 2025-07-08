@@ -53,8 +53,8 @@ export default function Topbar() {
               <Link
                 href="https://gallery.kevinsutandi.com"
                 className={`transition-all duration-300 text-sm uppercase tracking-wider font-medium ${isScrolled
-                    ? 'text-coffee/80 hover:text-coffee'
-                    : 'text-white/90 hover:text-white'
+                  ? 'text-coffee/80 hover:text-coffee'
+                  : 'text-white/90 hover:text-white'
                   }`}
               >
                 Recent Work
@@ -62,8 +62,8 @@ export default function Topbar() {
               <Link
                 href="#contact"
                 className={`transition-all duration-300 text-sm uppercase tracking-wider font-medium ${isScrolled
-                    ? 'text-coffee/80 hover:text-coffee'
-                    : 'text-white/90 hover:text-white'
+                  ? 'text-coffee/80 hover:text-coffee'
+                  : 'text-white/90 hover:text-white'
                   }`}
               >
                 Contact
@@ -76,8 +76,8 @@ export default function Topbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`transition-all duration-300 hover:scale-110 ${isScrolled
-                      ? 'text-coffee/70 hover:text-coffee'
-                      : 'text-white/80 hover:text-white'
+                    ? 'text-coffee/70 hover:text-coffee'
+                    : 'text-white/80 hover:text-white'
                     }`}
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -90,8 +90,8 @@ export default function Topbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`transition-all duration-300 hover:scale-110 ${isScrolled
-                      ? 'text-coffee/70 hover:text-coffee'
-                      : 'text-white/80 hover:text-white'
+                    ? 'text-coffee/70 hover:text-coffee'
+                    : 'text-white/80 hover:text-white'
                     }`}
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -105,8 +105,8 @@ export default function Topbar() {
             <button
               onClick={toggleMenu}
               className={`md:hidden p-2 rounded-md transition-all duration-300 cursor-pointer ${isScrolled
-                  ? 'text-coffee hover:bg-coffee/10'
-                  : 'text-white hover:bg-white/10'
+                ? 'text-coffee hover:bg-coffee/10'
+                : 'text-white hover:bg-white/10'
                 }`}
               aria-label="Toggle menu"
             >

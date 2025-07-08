@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function AboutMe() {
   return (
-    <div className="warm-gradient-vertical px-6 py-20">
+    <div className="warm-gradient-vertical px-6 py-20" id="about-me">
       <div className="container mx-auto flex w-full max-w-7xl flex-col items-center justify-center">
         {/* Main heading with animation */}
         <h1 className="text-charcoal animate-reveal-up font-acumin-pro-bold mb-16 max-w-4xl text-center text-3xl leading-tight font-bold sm:text-4xl lg:text-4xl xl:text-5xl">

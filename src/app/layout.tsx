@@ -7,6 +7,7 @@ import '@mantine/notifications/styles.css'
 import '@mantine/dates/styles.css'
 import Topbar from '@/components/Topbar'
 import Footer from '@/components/Footer'
+import StructuredData from '@/components/StructuredData'
 import { MantineProvider, createTheme } from '@mantine/core'
 import { Notifications } from '@mantine/notifications'
 
@@ -37,8 +38,149 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'Kevin Sutandi',
-  description: 'Kevin Sutandi Photography',
+  metadataBase: new URL('https://kevinsutandi.com'),
+  title: {
+    default: 'Kevin Sutandi - Sydney Graduation Photographer | Professional Photography Services',
+    template: '%s | Kevin Sutandi Photography'
+  },
+  description: 'Professional Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography. Capturing your most precious moments with warmth, authenticity, and artistic vision.',
+  keywords: [
+    'graduation photographer Sydney',
+    'Sydney photographer',
+    'professional photography Sydney',
+    'graduation photos',
+    'wedding photographer',
+    'event photographer',
+    'landscape photography',
+    'Kevin Sutandi',
+    'portrait photography',
+    'photography services Australia',
+    'Sydney photographer',
+    'professional photography Sydney',
+    'graduation photos',
+    'graduation',
+    'graduation photography Sydney',
+    'graduation photos Sydney',
+    'pre-wedding photographer',
+    'pre-wedding photos',
+    'pre-wedding',
+    'pre-wedding photography Sydney',
+    'pre-wedding photographer Sydney',
+    'pre-wedding photos Sydney',
+    'pre-wedding photography Sydney',
+    'event photographer',
+    'landscape photography',
+    'Kevin Sutandi',
+    'portrait photography',
+    'photography services Australia',
+    'UNSW Graduation Photography',
+    'UNSW Graduation Photographer',
+    'UNSW Graduation Photos',
+    'UNSW Graduation',
+    'UNSW Graduation Photography Sydney',
+    'UNSW Graduation Photographer Sydney',
+    'UNSW Graduation Photos Sydney',
+    'UTS Graduation Photography',
+    'UTS Graduation Photographer',
+    'UTS Graduation Photos',
+    'UTS Graduation',
+    'UTS Graduation Photography Sydney',
+    'UTS Graduation Photographer Sydney',
+    'UTS Graduation Photos Sydney',
+    'USYD Graduation Photography',
+    'USYD Graduation Photographer',
+    'USYD Graduation Photos',
+    'USYD Graduation',
+    'USYD Graduation Photography Sydney',
+    'USYD Graduation Photographer Sydney',
+    'USYD Graduation Photos Sydney',
+    'Macquarie University Graduation Photography',
+    'Macquarie University Graduation Photographer',
+    'Macquarie University Graduation Photos',
+    'Macquarie University Graduation',
+    'Macquarie University Graduation Photography Sydney',
+    'Macquarie University Graduation Photographer Sydney',
+    'Macquarie University Graduation Photos Sydney',
+    'University of Sydney Graduation Photography',
+    'University of Sydney Graduation Photographer',
+    'University of Sydney Graduation Photos',
+    'University of Sydney Graduation',
+    'University of Sydney Graduation Photography Sydney',
+    'University of Sydney Graduation Photographer Sydney',
+    'University of Sydney Graduation Photos Sydney',
+    'University of Technology Sydney Graduation Photography',
+    'University of Technology Sydney Graduation Photographer',
+    'University of Technology Sydney Graduation Photos',
+    'University of Technology Sydney Graduation',
+    'University of Technology Sydney Graduation Photography Sydney',
+    'University of Technology Sydney Graduation Photographer Sydney',
+    'University of Technology Sydney Graduation Photos Sydney',
+    'University of New South Wales Graduation Photography',
+    'University of New South Wales Graduation Photographer',
+    'University of New South Wales Graduation Photos',
+    'University of New South Wales Graduation',
+    'University of New South Wales Graduation Photography Sydney',
+    'University of New South Wales Graduation Photographer Sydney',
+    'University of New South Wales Graduation Photos Sydney',
+  ],
+  authors: [{ name: 'Kevin Sutandi' }],
+  creator: 'Kevin Sutandi',
+  publisher: 'Kevin Sutandi Photography',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_AU',
+    url: 'https://kevinsutandi.com',
+    siteName: 'Kevin Sutandi Photography',
+    title: 'Kevin Sutandi - Sydney Graduation Photographer | Professional Photography Services',
+    description: 'Professional Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography. Capturing your most precious moments with warmth, authenticity, and artistic vision.',
+    images: [
+      {
+        url: '/about-me.jpg',
+        width: 370,
+        height: 555,
+        alt: 'Kevin Sutandi - Professional Photographer in Sydney',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kevin Sutandi - Sydney Graduation Photographer',
+    description: 'Professional Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography.',
+    images: ['/about-me.jpg'],
+    creator: '@kevinesutandi',
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
+  manifest: '/manifest.json',
+  alternates: {
+    canonical: 'https://kevinsutandi.com',
+  },
+  category: 'Photography',
+  classification: 'Professional Photography Services',
+  other: {
+    'geo.region': 'AU-NSW',
+    'geo.placename': 'Sydney',
+    'geo.position': '-33.8688;151.2093',
+    'ICBM': '-33.8688, 151.2093',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'black-translucent',
+    'theme-color': '#8b6f47',
+    'msapplication-TileColor': '#8b6f47',
+  },
 }
 
 const customTheme = createTheme({
@@ -204,6 +346,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="apple-mobile-web-app-title" content="Kevin Sutandi Photography" />
+        <StructuredData />
       </head>
       <body
         className={`${acuminPro.variable} ${acuminProItalic.variable} ${acuminProBold.variable} ${acuminProBoldItalic.variable} ${poppins.variable} antialiased`}

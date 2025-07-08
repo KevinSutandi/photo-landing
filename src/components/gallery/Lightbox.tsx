@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import Image from 'next/image'
 
 interface LightboxProps {
   imageSrc: string
@@ -42,7 +43,7 @@ export default function Lightbox({
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
+          className="absolute cursor-pointer top-6 right-6 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
         >
           <svg
             className="h-6 w-6 text-white"
@@ -62,7 +63,7 @@ export default function Lightbox({
         {/* Navigation Buttons */}
         <button
           onClick={onPrevious}
-          className="absolute top-1/2 left-6 z-10 flex h-12 w-12 -translate-y-1/2 transform items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
+          className="absolute cursor-pointer top-1/2 left-6 z-10 flex h-12 w-12 -translate-y-1/2 transform items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
         >
           <svg
             className="h-6 w-6 text-white"
@@ -81,7 +82,7 @@ export default function Lightbox({
 
         <button
           onClick={onNext}
-          className="absolute top-1/2 right-6 z-10 flex h-12 w-12 -translate-y-1/2 transform items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
+          className="absolute cursor-pointer top-1/2 right-6 z-10 flex h-12 w-12 -translate-y-1/2 transform items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
         >
           <svg
             className="h-6 w-6 text-white"
@@ -100,10 +101,13 @@ export default function Lightbox({
 
         {/* Main Image */}
         <div className="relative flex h-full max-h-[90vh] w-full max-w-5xl items-center justify-center">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={imageSrc}
+            width={1000}
+            height={1000}
             alt="Graduation photo"
+            placeholder="blur"
+            blurDataURL={imageSrc}
             className="warm-shadow-2xl h-auto max-h-full w-auto max-w-full rounded-lg object-contain"
             style={{ maxWidth: '100%', maxHeight: '90vh' }}
           />

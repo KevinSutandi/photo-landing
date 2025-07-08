@@ -57,7 +57,6 @@ export default function GalleryImage({ src, alt, onClick }: GalleryImageProps) {
           </div>
         )}
 
-        { }
         <Image
           src={src}
           alt={alt}

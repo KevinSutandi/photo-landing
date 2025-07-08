@@ -59,14 +59,22 @@ export default function Hero() {
       <div className="bg-warm-cream relative h-screen w-full overflow-hidden">
         {/* Loading state with warm overlay */}
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center">
-          <div className="px-4 text-center">
-            <h1 className="text-coffee animate-gentle-pulse mb-6 max-w-4xl text-center text-4xl font-medium opacity-60 drop-shadow-lg">
+          <div className="mx-auto max-w-6xl px-4 text-center">
+            {/* Main heading with warm styling */}
+            <h1 className="animate-reveal-up mb-6 text-center text-4xl leading-tight font-medium text-white drop-shadow-2xl md:text-5xl lg:text-6xl">
               Sydney Based Graduation Photographer
             </h1>
-            <p className="text-coffee/80 animate-gentle-pulse mx-auto max-w-2xl text-center text-2xl opacity-60">
-              Capturing the moments that{' '}
-              <span className="relative inline-block font-bold">matter</span>
-            </p>
+
+            {/* Subtitle with enhanced styling */}
+            <div className="animate-reveal-up-delay-1">
+              <p className="mb-8 text-center text-xl leading-relaxed font-light text-white/95 drop-shadow-xl md:text-2xl lg:text-3xl">
+                Capturing the moments that{' '}
+                <span className="text-warm-white relative inline-block font-bold">
+                  matter
+                  <AnimatedScribble />
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </div>

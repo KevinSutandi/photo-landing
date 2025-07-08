@@ -5,7 +5,7 @@ import Contact from '@/components/Contact'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sydney Graduation Photographer | Professional Photography Services',
+  title: 'Kevin Sutandi - Sydney Graduation Photographer',
   description: 'Kevin Sutandi - Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography. Capturing your most precious moments with warmth, authenticity, and artistic vision. Book your session today!',
   keywords: [
     'graduation photographer Sydney',

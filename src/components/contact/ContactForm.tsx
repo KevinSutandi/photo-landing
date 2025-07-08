@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { useState } from 'react'
 import { TextInput, Textarea, Select, Group, Stack } from '@mantine/core'
@@ -26,7 +26,8 @@ export default function ContactForm() {
     },
     validate: {
       name: (value) => (!value ? 'Name is required' : null),
-      email: (value) => (!/^\S+@\S+\.\S+$/.test(value) ? 'Invalid email' : null),
+      email: (value) =>
+        !/^\S+@\S+\.\S+$/.test(value) ? 'Invalid email' : null,
       eventType: (value) => (!value ? 'Please select an event type' : null),
       date: (value) => (!value ? 'Please select a date' : null),
       message: (value) => (!value ? 'Please tell us about your vision' : null),
@@ -60,7 +61,8 @@ export default function ContactForm() {
       setSubmitted(true)
       notifications.show({
         title: 'Message sent successfully!',
-        message: 'Thanks for reaching out. I\'ll get back to you within 24 hours.',
+        message:
+          "Thanks for reaching out. I'll get back to you within 24 hours.",
         color: 'green',
         autoClose: 5000,
       })
@@ -70,10 +72,12 @@ export default function ContactForm() {
         setSubmitted(false)
         form.reset()
       }, 5000)
-
     } catch (error) {
       console.error('Form submission error:', error)
-      const errorMessage = error instanceof Error ? error.message : 'Something went wrong. Please try again.'
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : 'Something went wrong. Please try again.'
 
       notifications.show({
         title: 'Error',
@@ -88,8 +92,8 @@ export default function ContactForm() {
 
   return (
     <div className="animate-reveal-left">
-      <div className="bg-warm-white rounded-2xl p-8 warm-shadow-lg">
-        <h3 className="text-2xl font-bold text-coffee mb-6 font-acumin-pro-bold">
+      <div className="bg-warm-white warm-shadow-lg rounded-2xl p-8">
+        <h3 className="text-coffee font-acumin-pro-bold mb-6 text-2xl font-bold">
           Quick Contact
         </h3>
 
@@ -138,7 +142,13 @@ export default function ContactForm() {
                 />
               </Group>
 
-              <DateTimePicker required withAsterisk label="Preferred Date" placeholder="Pick date and time" {...form.getInputProps('date')} />
+              <DateTimePicker
+                required
+                withAsterisk
+                label="Preferred Date"
+                placeholder="Pick date and time"
+                {...form.getInputProps('date')}
+              />
 
               <TextInput
                 label="Refferer"
@@ -147,7 +157,14 @@ export default function ContactForm() {
               />
 
               {/* Honeypot field - hidden from users, visible to bots */}
-              <div style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }}>
+              <div
+                style={{
+                  position: 'absolute',
+                  left: '-9999px',
+                  opacity: 0,
+                  pointerEvents: 'none',
+                }}
+              >
                 <TextInput
                   label="Leave this field empty"
                   placeholder="Do not fill this field"
@@ -168,18 +185,28 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-coffee hover:bg-dark-coffee disabled:bg-coffee/70 text-warm-white font-medium py-4 px-6 rounded-lg transition-all duration-300 disabled:cursor-not-allowed cursor-pointer transform hover:scale-105 disabled:scale-100 warm-shadow-lg flex items-center justify-center space-x-2"
+                className="bg-coffee hover:bg-dark-coffee disabled:bg-coffee/70 text-warm-white warm-shadow-lg flex w-full transform cursor-pointer items-center justify-center space-x-2 rounded-lg px-6 py-4 font-medium transition-all duration-300 hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>
-                    <div className="w-5 h-5 border-2 border-warm-white/30 border-t-warm-white rounded-full animate-spin"></div>
+                    <div className="border-warm-white/30 border-t-warm-white h-5 w-5 animate-spin rounded-full border-2"></div>
                     <span>Sending...</span>
                   </>
                 ) : (
                   <>
                     <span>Send Message</span>
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    <svg
+                      className="h-5 w-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                      />
                     </svg>
                   </>
                 )}
@@ -190,4 +217,4 @@ export default function ContactForm() {
       </div>
     </div>
   )
-} 
+}

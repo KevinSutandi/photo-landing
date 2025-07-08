@@ -19,15 +19,15 @@ export const GRADUATION_PHOTOS = [
   'graduation-18.jpg',
   'graduation-19.jpg',
   'graduation-20.jpg',
-];
+]
 
-export const BASE_URL = 'https://kevin-photos.fly.storage.tigris.dev/grad/';
+export const BASE_URL = 'https://kevin-photos.fly.storage.tigris.dev/grad/'
 
 export const MASONRY_BREAKPOINTS = {
   default: 4,
   1100: 3,
   700: 2,
-  500: 1
-};
+  500: 1,
+}
 
-export const MAX_RETRY_COUNT = 3;
+export const MAX_RETRY_COUNT = 3

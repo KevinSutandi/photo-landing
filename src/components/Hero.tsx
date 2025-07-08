@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { useState, useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
@@ -24,15 +24,15 @@ export default function Hero() {
   const [emblaRef] = useEmblaCarousel(
     {
       loop: true,
-      duration: 30 // Slower transition for background effect
+      duration: 30, // Slower transition for background effect
     },
     [
       Autoplay({
         delay: 5000, // Auto-slide every 5 seconds
-        stopOnInteraction: false // Keep sliding even when user interacts
+        stopOnInteraction: false, // Keep sliding even when user interacts
       }),
-      Fade()
-    ]
+      Fade(),
+    ],
   )
 
   const images = [
@@ -56,18 +56,16 @@ export default function Hero() {
   // Don't render until we know the viewport size to prevent flickering
   if (isMobile === null) {
     return (
-      <div className="relative h-screen w-full overflow-hidden bg-warm-cream">
+      <div className="bg-warm-cream relative h-screen w-full overflow-hidden">
         {/* Loading state with warm overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-          <div className="text-center px-4">
-            <h1 className="text-4xl font-medium text-coffee text-center max-w-4xl mb-6 drop-shadow-lg opacity-60 animate-gentle-pulse">
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center">
+          <div className="px-4 text-center">
+            <h1 className="text-coffee animate-gentle-pulse mb-6 max-w-4xl text-center text-4xl font-medium opacity-60 drop-shadow-lg">
               Sydney Based Graduation Photographer
             </h1>
-            <p className="text-coffee/80 text-center max-w-2xl mx-auto text-2xl opacity-60 animate-gentle-pulse">
+            <p className="text-coffee/80 animate-gentle-pulse mx-auto max-w-2xl text-center text-2xl opacity-60">
               Capturing the moments that{' '}
-              <span className="font-bold relative inline-block">
-                matter
-              </span>
+              <span className="relative inline-block font-bold">matter</span>
             </p>
           </div>
         </div>
@@ -79,13 +77,16 @@ export default function Hero() {
     <div className="relative h-screen w-full overflow-hidden">
       {/* Carousel Background */}
       <div className="embla absolute inset-0" ref={emblaRef}>
-        <div className="embla__container h-full flex">
+        <div className="embla__container flex h-full">
           {currentImages.map((src, index) => (
-            <div key={index} className="embla__slide flex-none w-full h-full relative">
+            <div
+              key={index}
+              className="embla__slide relative h-full w-full flex-none"
+            >
               <Image
                 src={src}
                 alt={`Hero background ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
                 width={1920}
                 height={1080}
                 priority={index === 0} // Prioritize loading the first image
@@ -98,23 +99,23 @@ export default function Hero() {
       </div>
 
       {/* Floating decorative elements */}
-      <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-accent-gold/30 rounded-full animate-float"></div>
-      <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-soft-gold/40 rounded-full animate-float-delayed"></div>
-      <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-accent-gold/20 rounded-full animate-float"></div>
+      <div className="bg-accent-gold/30 animate-float absolute top-1/4 left-1/4 h-2 w-2 rounded-full"></div>
+      <div className="bg-soft-gold/40 animate-float-delayed absolute top-1/3 right-1/3 h-1 w-1 rounded-full"></div>
+      <div className="bg-accent-gold/20 animate-float absolute bottom-1/4 left-1/3 h-1.5 w-1.5 rounded-full"></div>
 
       {/* Text Overlay */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-        <div className="text-center px-4 max-w-6xl mx-auto">
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center">
+        <div className="mx-auto max-w-6xl px-4 text-center">
           {/* Main heading with warm styling */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white text-center mb-6 drop-shadow-2xl animate-reveal-up leading-tight">
+          <h1 className="animate-reveal-up mb-6 text-center text-4xl leading-tight font-medium text-white drop-shadow-2xl md:text-5xl lg:text-6xl">
             Sydney Based Graduation Photographer
           </h1>
 
           {/* Subtitle with enhanced styling */}
           <div className="animate-reveal-up-delay-1">
-            <p className="text-white/95 text-center text-xl md:text-2xl lg:text-3xl mb-8 drop-shadow-xl font-light leading-relaxed">
+            <p className="mb-8 text-center text-xl leading-relaxed font-light text-white/95 drop-shadow-xl md:text-2xl lg:text-3xl">
               Capturing the moments that{' '}
-              <span className="font-bold relative inline-block text-warm-white">
+              <span className="text-warm-white relative inline-block font-bold">
                 matter
                 <AnimatedScribble />
               </span>
@@ -124,11 +125,13 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-reveal-up-delay-3">
+      <div className="animate-reveal-up-delay-3 absolute bottom-8 left-1/2 z-10 -translate-x-1/2 transform">
         <div className="flex flex-col items-center">
-          <span className="text-white/80 text-sm mb-2 font-light">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce"></div>
+          <span className="mb-2 text-sm font-light text-white/80">
+            Scroll to explore
+          </span>
+          <div className="flex h-10 w-6 justify-center rounded-full border-2 border-white/60">
+            <div className="mt-2 h-3 w-1 animate-bounce rounded-full bg-white/60"></div>
           </div>
         </div>
       </div>

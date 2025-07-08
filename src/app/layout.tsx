@@ -1,45 +1,45 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Poppins } from "next/font/google";
-import "./globals.css";
-import '@mantine/core/styles.css';
-import '@mantine/notifications/styles.css';
-import '@mantine/dates/styles.css';
-import Topbar from "@/components/Topbar";
-import Footer from "@/components/Footer";
-import { MantineProvider, createTheme } from '@mantine/core';
-import { Notifications } from '@mantine/notifications';
+import type { Metadata } from 'next'
+import localFont from 'next/font/local'
+import { Poppins } from 'next/font/google'
+import './globals.css'
+import '@mantine/core/styles.css'
+import '@mantine/notifications/styles.css'
+import '@mantine/dates/styles.css'
+import Topbar from '@/components/Topbar'
+import Footer from '@/components/Footer'
+import { MantineProvider, createTheme } from '@mantine/core'
+import { Notifications } from '@mantine/notifications'
 
 const acuminPro = localFont({
-  src: "./fonts/Acumin-RPro.otf",
-  variable: "--font-acumin-pro",
-});
+  src: './fonts/Acumin-RPro.otf',
+  variable: '--font-acumin-pro',
+})
 
 const acuminProItalic = localFont({
-  src: "./fonts/Acumin-ItPro.otf",
-  variable: "--font-acumin-pro-italic",
-});
+  src: './fonts/Acumin-ItPro.otf',
+  variable: '--font-acumin-pro-italic',
+})
 
 const acuminProBold = localFont({
-  src: "./fonts/Acumin-BdPro.otf",
-  variable: "--font-acumin-pro-bold",
-});
+  src: './fonts/Acumin-BdPro.otf',
+  variable: '--font-acumin-pro-bold',
+})
 
 const acuminProBoldItalic = localFont({
-  src: "./fonts/Acumin-BdItPro.otf",
-  variable: "--font-acumin-pro-bold-italic",
-});
+  src: './fonts/Acumin-BdItPro.otf',
+  variable: '--font-acumin-pro-bold-italic',
+})
 
 const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "300", "200", "100"],
-});
+  variable: '--font-poppins',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '300', '200', '100'],
+})
 
 export const metadata: Metadata = {
-  title: "Kevin Sutandi",
-  description: "Kevin Sutandi Photography",
-};
+  title: 'Kevin Sutandi',
+  description: 'Kevin Sutandi Photography',
+}
 
 const customTheme = createTheme({
   primaryColor: 'coffee',
@@ -71,7 +71,8 @@ const customTheme = createTheme({
   },
   fontFamily: 'var(--font-acumin-pro), var(--font-poppins), sans-serif',
   headings: {
-    fontFamily: 'var(--font-acumin-pro-bold), var(--font-acumin-pro), var(--font-poppins), sans-serif',
+    fontFamily:
+      'var(--font-acumin-pro-bold), var(--font-acumin-pro), var(--font-poppins), sans-serif',
   },
   components: {
     Button: {
@@ -192,12 +193,12 @@ const customTheme = createTheme({
       },
     },
   },
-});
+})
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
@@ -212,5 +213,5 @@ export default function RootLayout({
         </MantineProvider>
       </body>
     </html>
-  );
+  )
 }

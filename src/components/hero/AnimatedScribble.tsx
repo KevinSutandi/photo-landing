@@ -1,7 +1,7 @@
 export default function AnimatedScribble() {
   return (
     <svg
-      className="absolute -bottom-1 left-0 w-full h-4 pointer-events-none"
+      className="pointer-events-none absolute -bottom-1 left-0 h-4 w-full"
       viewBox="0 0 140 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +18,7 @@ export default function AnimatedScribble() {
           strokeDasharray: '180',
           strokeDashoffset: '180',
           animation: 'drawScribble 2.5s ease-out 1s forwards',
-          filter: 'drop-shadow(0 0 3px rgba(212, 175, 55, 0.4))'
+          filter: 'drop-shadow(0 0 3px rgba(212, 175, 55, 0.4))',
         }}
       />
       {/* Second layer for more artistic depth */}
@@ -33,7 +33,7 @@ export default function AnimatedScribble() {
           strokeDasharray: '170',
           strokeDashoffset: '170',
           animation: 'drawScribble 2.2s ease-out 1.3s forwards',
-          opacity: '0.7'
+          opacity: '0.7',
         }}
       />
     </svg>

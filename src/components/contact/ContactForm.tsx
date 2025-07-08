@@ -11,6 +11,8 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
+  const [formStartTime] = useState(Date.now())
+
   const form = useForm({
     initialValues: {
       name: '',
@@ -20,6 +22,7 @@ export default function ContactForm() {
       date: '',
       message: '',
       refferer: '',
+      honeypot: '', // Honeypot field - should remain empty
     },
     validate: {
       name: (value) => (!value ? 'Name is required' : null),
@@ -34,15 +37,31 @@ export default function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      // Simulate form submission with the form values
-      console.log('Form submitted with values:', values)
-      await new Promise(resolve => setTimeout(resolve, 2000))
+      // Prepare submission data with security measures
+      const submissionData = {
+        ...values,
+        submittedAt: formStartTime, // Send when form was loaded for timing analysis
+      }
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionData),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit form')
+      }
 
       setSubmitted(true)
       notifications.show({
         title: 'Message sent successfully!',
         message: 'Thanks for reaching out. I\'ll get back to you within 24 hours.',
-        color: 'coffee',
+        color: 'green',
         autoClose: 5000,
       })
 
@@ -54,11 +73,13 @@ export default function ContactForm() {
 
     } catch (error) {
       console.error('Form submission error:', error)
+      const errorMessage = error instanceof Error ? error.message : 'Something went wrong. Please try again.'
+
       notifications.show({
         title: 'Error',
-        message: 'Something went wrong. Please try again.',
+        message: errorMessage,
         color: 'red',
-        autoClose: 5000,
+        autoClose: 7000,
       })
     } finally {
       setIsSubmitting(false)
@@ -124,6 +145,17 @@ export default function ContactForm() {
                 placeholder="Where did you hear about me?"
                 {...form.getInputProps('refferer')}
               />
+
+              {/* Honeypot field - hidden from users, visible to bots */}
+              <div style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }}>
+                <TextInput
+                  label="Leave this field empty"
+                  placeholder="Do not fill this field"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  {...form.getInputProps('honeypot')}
+                />
+              </div>
 
               <Textarea
                 label="Tell me about your vision"

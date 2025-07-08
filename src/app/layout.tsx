@@ -6,6 +6,7 @@ import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 import '@mantine/dates/styles.css';
 import Topbar from "@/components/Topbar";
+import Footer from "@/components/Footer";
 import { MantineProvider, createTheme } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
 
@@ -207,6 +208,7 @@ export default function RootLayout({
           <Notifications />
           <Topbar />
           {children}
+          <Footer />
         </MantineProvider>
       </body>
     </html>

@@ -26,8 +26,7 @@ export const BASE_URL = 'https://kevin-photos.fly.storage.tigris.dev/grad/'
 export const MASONRY_BREAKPOINTS = {
   default: 4,
   1100: 3,
-  700: 2,
-  500: 1,
+  500: 2,
 }
 
 export const MAX_RETRY_COUNT = 3

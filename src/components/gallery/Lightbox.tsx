@@ -43,7 +43,7 @@ export default function Lightbox({
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute cursor-pointer top-6 right-6 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
+          className="absolute top-6 right-6 z-10 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
         >
           <svg
             className="h-6 w-6 text-white"
@@ -63,7 +63,7 @@ export default function Lightbox({
         {/* Navigation Buttons */}
         <button
           onClick={onPrevious}
-          className="absolute cursor-pointer top-1/2 left-6 z-10 flex h-12 w-12 -translate-y-1/2 transform items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
+          className="absolute top-1/2 left-6 z-10 flex h-12 w-12 -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
         >
           <svg
             className="h-6 w-6 text-white"
@@ -82,7 +82,7 @@ export default function Lightbox({
 
         <button
           onClick={onNext}
-          className="absolute cursor-pointer top-1/2 right-6 z-10 flex h-12 w-12 -translate-y-1/2 transform items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
+          className="absolute top-1/2 right-6 z-10 flex h-12 w-12 -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
         >
           <svg
             className="h-6 w-6 text-white"

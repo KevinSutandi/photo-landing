@@ -40,10 +40,12 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL('https://kevinsutandi.com'),
   title: {
-    default: 'Kevin Sutandi - Sydney Graduation Photographer | Professional Photography Services',
-    template: '%s | Kevin Sutandi Photography'
+    default:
+      'Kevin Sutandi - Sydney Graduation Photographer | Professional Photography Services',
+    template: '%s | Kevin Sutandi Photography',
   },
-  description: 'Professional Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography. Capturing your most precious moments with warmth, authenticity, and artistic vision.',
+  description:
+    'Professional Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography. Capturing your most precious moments with warmth, authenticity, and artistic vision.',
   keywords: [
     'graduation photographer Sydney',
     'Sydney photographer',
@@ -142,8 +144,10 @@ export const metadata: Metadata = {
     locale: 'en_AU',
     url: 'https://kevinsutandi.com',
     siteName: 'Kevin Sutandi Photography',
-    title: 'Kevin Sutandi - Sydney Graduation Photographer | Professional Photography Services',
-    description: 'Professional Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography. Capturing your most precious moments with warmth, authenticity, and artistic vision.',
+    title:
+      'Kevin Sutandi - Sydney Graduation Photographer | Professional Photography Services',
+    description:
+      'Professional Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography. Capturing your most precious moments with warmth, authenticity, and artistic vision.',
     images: [
       {
         url: '/about-me.jpg',
@@ -156,7 +160,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Kevin Sutandi - Sydney Graduation Photographer',
-    description: 'Professional Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography.',
+    description:
+      'Professional Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography.',
     images: ['/about-me.jpg'],
     creator: '@kevinesutandi',
   },
@@ -175,7 +180,7 @@ export const metadata: Metadata = {
     'geo.region': 'AU-NSW',
     'geo.placename': 'Sydney',
     'geo.position': '-33.8688;151.2093',
-    'ICBM': '-33.8688, 151.2093',
+    ICBM: '-33.8688, 151.2093',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'black-translucent',
     'theme-color': '#8b6f47',
@@ -345,7 +350,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="apple-mobile-web-app-title" content="Kevin Sutandi Photography" />
+        <meta
+          name="apple-mobile-web-app-title"
+          content="Kevin Sutandi Photography"
+        />
         <StructuredData />
       </head>
       <body

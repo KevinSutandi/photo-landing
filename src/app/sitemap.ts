@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://kevinsutandi.com'
-  
+
   return [
     {
       url: baseUrl,
@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/#about-me`,
       lastModified: new Date(),
-      changeFrequency: 'monthly', 
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
@@ -35,4 +35,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
   ]
-} 
+}

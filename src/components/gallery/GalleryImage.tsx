@@ -62,8 +62,9 @@ export default function GalleryImage({ src, alt, onClick }: GalleryImageProps) {
           alt={alt}
           width={400}
           height={600}
-          className={`h-auto w-full object-cover transition-all duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
+          className={`h-auto w-full object-cover transition-all duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
           onLoad={handleLoad}
           onError={handleError}
           loading="lazy"

@@ -18,7 +18,7 @@
       "purpose": "maskable any"
     },
     {
-      "src": "/web-app-manifest-512x512.png", 
+      "src": "/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
@@ -50,7 +50,7 @@
       "id": "gallery"
     },
     {
-      "platform": "web", 
+      "platform": "web",
       "url": "https://instagram.com/kevinesutandi",
       "id": "instagram"
     }

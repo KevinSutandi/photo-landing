@@ -6,7 +6,8 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Kevin Sutandi - Sydney Graduation Photographer',
-  description: 'Kevin Sutandi - Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography. Capturing your most precious moments with warmth, authenticity, and artistic vision. Book your session today!',
+  description:
+    'Kevin Sutandi - Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography. Capturing your most precious moments with warmth, authenticity, and artistic vision. Book your session today!',
   keywords: [
     'graduation photographer Sydney',
     'Sydney graduation photos',
@@ -57,7 +58,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Sydney Graduation Photographer | Professional Photography Services',
-    description: 'Kevin Sutandi - Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography. Capturing your most precious moments with warmth, authenticity, and artistic vision.',
+    description:
+      'Kevin Sutandi - Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography. Capturing your most precious moments with warmth, authenticity, and artistic vision.',
     url: 'https://kevinsutandi.com',
     images: [
       {
@@ -70,7 +72,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: 'Sydney Graduation Photographer | Professional Photography Services',
-    description: 'Kevin Sutandi - Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography.',
+    description:
+      'Kevin Sutandi - Sydney-based photographer specializing in graduation photography, pre-weddings, events, and stunning landscape photography.',
   },
   alternates: {
     canonical: 'https://kevinsutandi.com',

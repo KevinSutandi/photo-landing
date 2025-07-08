@@ -82,7 +82,7 @@ export default function Topbar() {
               {/* Social Media Icons */}
               <div className="ml-6 flex items-center space-x-4">
                 <Link
-                  href="https://instagram.com"
+                  href="https://instagram.com/kevinesutandi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`transition-all duration-300 hover:scale-110 ${
@@ -101,7 +101,7 @@ export default function Topbar() {
                 </Link>
 
                 <Link
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/+61412123138"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`transition-all duration-300 hover:scale-110 ${
@@ -190,7 +190,7 @@ export default function Topbar() {
             style={{ transitionDelay: isOpen ? '0.3s' : '0s' }}
           >
             <Link
-              href="https://instagram.com"
+              href="https://instagram.com/kevinesutandi"
               target="_blank"
               rel="noopener noreferrer"
               className="text-warm-white/80 hover:text-warm-white transition-all duration-200 hover:scale-110"
@@ -201,7 +201,7 @@ export default function Topbar() {
             </Link>
 
             <Link
-              href="https://wa.me/1234567890"
+              href="https://wa.me/+61412123138"
               target="_blank"
               rel="noopener noreferrer"
               className="text-warm-white/80 hover:text-warm-white transition-all duration-200 hover:scale-110"

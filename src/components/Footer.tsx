@@ -115,7 +115,7 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex gap-4">
               <Link
-                href="https://instagram.com/kevinsutandi"
+                href="https://instagram.com/kevinesutandi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-coffee group-hover:text-dark-coffee from-accent-gold/20 to-coffee/10 hover:from-accent-gold/30 hover:to-coffee/20 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br transition-all duration-300 hover:scale-110 hover:shadow-lg"

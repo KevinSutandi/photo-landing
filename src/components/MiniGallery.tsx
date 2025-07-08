@@ -49,7 +49,10 @@ export default function MiniGallery() {
   }
 
   return (
-    <div className="from-cream to-warm-cream bg-gradient-to-b px-6 py-20" id="curated-gallery">
+    <div
+      className="from-cream to-warm-cream bg-gradient-to-b px-6 py-20"
+      id="curated-gallery"
+    >
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="animate-reveal-up mb-16 text-center">

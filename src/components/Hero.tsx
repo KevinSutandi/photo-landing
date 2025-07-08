@@ -5,7 +5,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
 import Fade from 'embla-carousel-fade'
-import AnimatedScribble from './AnimatedScribble'
+import AnimatedScribble from './hero/AnimatedScribble'
 
 export default function Hero() {
   const [isMobile, setIsMobile] = useState<boolean | null>(null) // null means not yet determined

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 interface GalleryImageProps {
   src: string
@@ -56,15 +57,14 @@ export default function GalleryImage({ src, alt, onClick }: GalleryImageProps) {
           </div>
         )}
 
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        { }
+        <Image
           src={src}
           alt={alt}
           width={400}
           height={600}
-          className={`h-auto w-full object-cover transition-all duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`h-auto w-full object-cover transition-all duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
           onLoad={handleLoad}
           onError={handleError}
           loading="lazy"

@@ -202,6 +202,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Kevin Sutandi Photography" />
+      </head>
       <body
         className={`${acuminPro.variable} ${acuminProItalic.variable} ${acuminProBold.variable} ${acuminProBoldItalic.variable} ${poppins.variable} antialiased`}
       >

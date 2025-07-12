@@ -10,6 +10,7 @@ import Footer from '@/components/Footer'
 import StructuredData from '@/components/StructuredData'
 import { MantineProvider, createTheme } from '@mantine/core'
 import { Notifications } from '@mantine/notifications'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const acuminPro = localFont({
   src: './fonts/Acumin-RPro.otf',
@@ -364,6 +365,7 @@ export default function RootLayout({
           <Topbar />
           {children}
           <Footer />
+          <SpeedInsights />
         </MantineProvider>
       </body>
     </html>

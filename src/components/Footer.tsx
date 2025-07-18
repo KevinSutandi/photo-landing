@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Heart, Mail, Phone, MapPin } from 'lucide-react'
+import { Heart, Mail, Phone, MapPin, Globe } from 'lucide-react'
 import Link from 'next/link'
 
 const Footer = () => {
@@ -90,7 +90,7 @@ const Footer = () => {
             </ul>
 
             {/* Subtle consulting link (Enable once we have that up and running) */}
-            {/* <div className="pt-4 border-t border-soft-beige/50">
+            <div className="pt-4 border-t border-soft-beige/50">
               <a
                 href="https://gloom.studio"
                 target="_blank"
@@ -100,7 +100,7 @@ const Footer = () => {
                 <Globe className="w-3 h-3 group-hover:scale-110 transition-transform" />
                 <span className="group-hover:underline">Like the website? Check out my web consulting and development services</span>
               </a>
-            </div> */}
+            </div>
           </div>
 
           {/* Social & Connect */}

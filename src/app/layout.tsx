@@ -355,6 +355,7 @@ export default function RootLayout({
           name="apple-mobile-web-app-title"
           content="Kevin Sutandi Photography"
         />
+        <meta name="google-site-verification" content="L8jo09sincUWO29AK5dQIIfvrHz1payIRyyWzNo1sDU" />
         <StructuredData />
       </head>
       <body

@@ -245,7 +245,14 @@ export function AdminNotificationEmail({
               Preferred Date:
             </td>
             <td style={{ padding: '10px 0', borderBottom: '1px solid #eee' }}>
-              {new Date(formData.date).toLocaleString()}
+              {new Date(formData.date).toLocaleString('en-GB', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: false
+              })}
             </td>
           </tr>
           <tr>

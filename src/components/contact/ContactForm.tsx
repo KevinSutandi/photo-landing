@@ -147,6 +147,11 @@ export default function ContactForm() {
                 withAsterisk
                 label="Preferred Date"
                 placeholder="Pick date and time"
+                timePickerProps={{
+                  withDropdown: true,
+                  popoverProps: { withinPortal: false },
+                  format: '12h'
+                }}
                 {...form.getInputProps('date')}
               />
 

@@ -36,18 +36,18 @@ export default function Hero() {
   )
 
   const images = [
-    'https://kevin-photos.fly.storage.tigris.dev/Hero-2.jpg',
-    'https://kevin-photos.fly.storage.tigris.dev/Hero-1.jpg',
-    'https://kevin-photos.fly.storage.tigris.dev/Hero-3.jpg',
-    'https://kevin-photos.fly.storage.tigris.dev/Hero-4.jpg',
-    'https://kevin-photos.fly.storage.tigris.dev/Hero-5.jpg',
+    `${process.env.NEXT_PUBLIC_CDN_URL}/Hero-2.jpg`,
+    `${process.env.NEXT_PUBLIC_CDN_URL}/Hero-1.jpg`,
+    `${process.env.NEXT_PUBLIC_CDN_URL}/Hero-3.jpg`,
+    `${process.env.NEXT_PUBLIC_CDN_URL}/Hero-4.jpg`,
+    `${process.env.NEXT_PUBLIC_CDN_URL}/Hero-5.jpg`,
   ]
 
   const verticalImages = [
-    'https://kevin-photos.fly.storage.tigris.dev/Hero-1-Vertical.jpg',
-    'https://kevin-photos.fly.storage.tigris.dev/Hero-2-Vertical.jpg',
-    'https://kevin-photos.fly.storage.tigris.dev/Hero-3-Vertical.jpg',
-    'https://kevin-photos.fly.storage.tigris.dev/Hero-4-Vertical.jpg',
+    `${process.env.NEXT_PUBLIC_CDN_URL}/Hero-1-Vertical.jpg`,
+    `${process.env.NEXT_PUBLIC_CDN_URL}/Hero-2-Vertical.jpg`,
+    `${process.env.NEXT_PUBLIC_CDN_URL}/Hero-3-Vertical.jpg`,
+    `${process.env.NEXT_PUBLIC_CDN_URL}/Hero-4-Vertical.jpg`,
   ]
 
   // Choose images based on screen size

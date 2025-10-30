@@ -21,7 +21,7 @@ export const GRADUATION_PHOTOS = [
   'graduation-20.jpg',
 ]
 
-export const BASE_URL = 'https://kevin-photos.fly.storage.tigris.dev/grad/'
+export const BASE_URL = `${process.env.NEXT_PUBLIC_CDN_URL}/grad/`
 
 export const MASONRY_BREAKPOINTS = {
   default: 4,

@@ -97,7 +97,7 @@ export default function Hero() {
                 className="h-full w-full object-cover"
                 width={1920}
                 height={1080}
-                priority={index === 0} // Prioritize loading the first image
+                priority={true}
               />
               {/* Warm overlay for better text readability */}
               <div className="absolute inset-0 bg-black/50" />
